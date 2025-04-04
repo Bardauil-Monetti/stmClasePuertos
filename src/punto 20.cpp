@@ -22,12 +22,22 @@ void loop() {
   }
     if(est[0]){
     GPIOA ->BSSR |=GPIO_BSRR_BS0|GPIO_BSRR_BS1|
-  }elseif(est[1]){
+  }else{
+    GPIOA ->BSSR |=GPIO_BSRR_BR0|GPIO_BSRR_BR1|
+  }
+    if(est[1]){
     GPIOA ->BSSR |=GPIO_BSRR_BS2|GPIO_BSRR_BS3|             
-  }elseif(est[2]){
+  }else{
+    GPIOA ->BSSR |=GPIO_BSRR_BR2|GPIO_BSRR_BR3|
+  }if(est[2]){
     GPIOA ->BSSR |=GPIO_BSRR_BS4|GPIO_BSRR_BS5|
-  }elseif(est[3]){
+  }else{
+    GPIOA ->BSSR |=GPIO_BSRR_BR4|GPIO_BSRR_BR5|
+  }  
+    if(est[3]){
     GPIOA ->BSSR |=GPIO_BSRR_BS6|GPIO_BSRR_BS7|
+  }else{
+    GPIOA ->BSSR |=GPIO_BSRR_BR6|GPIO_BSRR_BR7|
   }
   }
   
